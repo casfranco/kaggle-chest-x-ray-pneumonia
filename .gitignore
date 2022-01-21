@@ -1,0 +1,18 @@
+data/datasets/*
+*.h5
+
+!data/datasets/.gitkeep
+#data/results/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# vscode
+settings.json
+.vscode
+.trash
+
+# OS files
+.DS_Store
