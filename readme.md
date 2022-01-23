@@ -36,7 +36,9 @@ Para a execução deste notebook python é necessario baixar o dataset do site d
 ```
 ## Processo de treinamento e validação
 
-Para execução do processo de treinamento e avaliação passo a passo, execute o jupyter notebook: main_train. Adicionalmente foi fornecido um script para execução do pipeline a ser executado desde a raiz do projeto.
+Neste projeto foram utilizados técnicas de aprendizado de máquina baseadas em redes neurais profundas. O modelo recebe como entrada todos os pixels da imagem normalizados entre 0-1. Os modelos realizarão o processamento da imagem extraindo os features de forma automática através de camadas convolucionais e finalmente realizando a classificação binaria nas camadas densas finais. A saída do modelo é uma função sigmoide tomando valores entre 0-1. Como valor threshold de desição, foi utilizado o valor 0.5. Desta forma, quando output > 0.5 a saída da rede será interpretada como presença de pneumonia.
+
+Para execução do processo de treinamento e avaliação passo a passo, execute o jupyter notebook: main_train. Adicionalmente foi fornecido um script para execução do pipeline de treinamento e avaliação (desde a raiz do projeto).
 
 ```bash
 python main_train.py
@@ -124,3 +126,6 @@ Quando realizado o processo de treinamento de varios modelos de classificação,
 Para selecionar candidatos de comparação, deverá se fornecer uma lista com os nomes das pastas geradas como o resultado do treinamento. 
 
 Para maiores detalhes observar a execução das funções no Jupyter Notebook incluido como demo.
+
+## Resumo do processo de treinamento - diagrama de sequência
+![plot](./data/readme_images/train_sequence_diagram_pneumoniaKaggle_casfranco.png)
