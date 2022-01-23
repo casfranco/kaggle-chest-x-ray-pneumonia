@@ -14,6 +14,8 @@ A seguir as principais caracteristicas do sistema
 - Modelos baseados em redes neurais
 - Avaliação usando métricas de classificação.
 
+Seguir o notebook `main_train.ipynb` com as explicações do passo a passo de geração de resultados.
+
 ## Dataset
 
 Para a execução deste notebook python é necessario baixar o dataset do site de kaggle, localizando os arquivos na pasta `data/datasets/` e a instalação das bibliotecas especificadas no arquivo `readme.txt`

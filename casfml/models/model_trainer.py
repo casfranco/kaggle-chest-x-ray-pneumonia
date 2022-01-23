@@ -17,6 +17,11 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 
 class ModelTrainer(object):
+    """
+    Class responsable for create, train and evaluate the neural network model.
+    Use hparams file for configuration
+    Save the results > data/results/[experiment_name] 
+    """
     def __init__(self, hparams):
         self.hparams = hparams
         self.model = self.create_model_architecture()
@@ -160,8 +165,10 @@ class ModelTrainer(object):
         if(self.hparams.save_model_results):
             cm_path = join(self.metrics_evaluation_path, f'{dataset}-cm.png')
 
-            plot_mlxtend_cm(
-                self.hparams, test_cm, target_names_list=self.hparams.classes, cm_path=cm_path)
+            plot_mlxtend_cm(params=self.hparams, 
+                            cm=test_cm, 
+                            target_names_list=self.hparams.classes, 
+                            cm_path=cm_path)
 
             plot_roc_auc(fpr, tpr, auc_roc,
                          self.metrics_evaluation_path, dataset)

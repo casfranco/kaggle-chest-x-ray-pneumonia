@@ -10,6 +10,12 @@ from casfml.data_loader.keras_generators import KerasClsGenerators
 from casfml.utils.file_utils import get_filenames
 
 class PneumoniaKaggleLoader(DataLoader):
+    """
+    Class responsable for data managment.
+    - split train/validation set
+    - Keras based train/val/test generator
+    - Dataset information plots
+    """
     
     def __init__(self,hparams):
         self.data_path = 'data/datasets/chest_xray'
